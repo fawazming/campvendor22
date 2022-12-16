@@ -61,7 +61,7 @@
             echo"<div class='container sheet'>";
 
         foreach ($del as $key => $de) {
-            if ($counter == 5) {
+            if ($counter == 12) {
                 $counter = 0;
                 echo"
     <div class='card'>
