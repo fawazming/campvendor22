@@ -78,8 +78,10 @@
 					<!-- <li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printm') ?>">Manual Printer</a> -->
 					</li>
 					<?php if($clear == 11):?>
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('special') ?>">Special</a>
-					</li>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('tag') ?>">Tag Generator</a>
+                    </li>
+                    <li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('special') ?>">Special</a>
+                    </li>
 					<?php else: ?>
 					<!-- <li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/manual') ?>">Manual Upload</a> -->
 					<!-- </li> -->

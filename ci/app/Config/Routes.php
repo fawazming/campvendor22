@@ -33,11 +33,13 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Home::dashboard');
 $routes->get('/special', 'Home::special');
+$routes->get('/tag', 'Home::tag');
 $routes->get('/sellpin', 'Home::sellpin');
 $routes->get('/calibrate', 'Home::calibrate');
 $routes->get('/reset', 'Home::resetPin');
 $routes->post('/auth', 'Home::auth');
 $routes->post('/sharepin', 'Home::sharepin');
+$routes->post('/printtag', 'Home::printtag');
 $routes->post('/logupdate', 'Home::logupdate');
 $routes->get('/admin/logout', 'Home::logout');
 
