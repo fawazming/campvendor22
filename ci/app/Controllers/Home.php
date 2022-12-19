@@ -72,6 +72,112 @@ class Home extends BaseController
 		}
 	}
 
+    public function manual()
+    {
+        // echo('dashboard');
+        $logged_in = session()->get('admin_logged_in');
+        $Pins = new \App\Models\Pins();
+        $Vendors = new \App\Models\Vendors();
+        if ($logged_in) {
+            $vendor = $Vendors->where('name', session()->get('admin'))->find()[0];
+            $headerdata = [
+                'admin' => session()->get('admin'),
+                'clear' => session()->get('clear'),
+                'admin_code' => session()->get('admincode'),
+            ];
+
+            $client = \Config\Services::curlrequest();
+
+            $response = $client->request('GET', 'https://opensheet.elk.sh/1YD3D_WsBJxO6r91A9QPWK-C1GZWkUuElziA0Z1vRAZM/pmc'.$vendor['sheet']);
+            $res = json_decode($response->getBody());
+            // var_dump($res);
+
+            $data = array(
+                'dels' => $res,
+                'reg' => count($res),
+                'link' => $vendor['log'],
+                'locked' => $vendor['locked'],
+                'sheet' => $vendor['sheet'],
+            );
+
+            echo view('header', $headerdata);
+            echo view('manual', $data);
+            echo view('footer');
+        } else {
+            echo view('login');
+        }
+    }
+
+    public function sync($sheet)
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) {
+            $Vendors = new \App\Models\Vendors();
+            $vend =$Vendors->where('sheet',$sheet)->find()[0];
+            $vID = $vend['id'];
+
+            if($vend['locked']){
+                echo "You are locked out. Contact Registrar <a href='javascript:history.back()'>Go Back</a>";
+                return redirect()->back();
+            }else{
+
+                $client = \Config\Services::curlrequest();
+
+                $response = $client->request('GET', 'https://opensheet.elk.sh/1YD3D_WsBJxO6r91A9QPWK-C1GZWkUuElziA0Z1vRAZM/pmc'.$sheet);
+                $res = json_decode($response->getBody());
+
+                $Delegates = new \App\Models\Delegates();
+
+                $allDel = [];
+                foreach ($res as $key => $delegate){
+                    $dt = [
+                        'fname' =>$delegate->fname,
+                        'lname' =>$delegate->lname,
+                        'lb' =>$delegate->lb,
+                        'phone' =>$delegate->{'phone '},
+                        'email' =>$delegate->email,
+                        'category' =>$delegate->category,
+                        'school' =>$delegate->school,
+                        'ref' =>'m',
+                        'old' => 0,
+                        'paid' =>'',
+                        'gender' =>$delegate->gender,
+                        'org' =>$delegate->org,
+                    ];
+                    array_push($allDel, $dt);
+                }
+                if(count($allDel) > 0){
+                    $Delegates->insertBatch($allDel);
+                }
+                $Vendors->update($vID, ['locked' => 1,]);
+                 echo "Data uploaded to CAMP DB. Ensure you remove these set of data from Google Spreadsheet to avoid duplication. <a href='javascript:history.back()'>Go Back</a>";
+                return redirect()->back();
+
+             }
+        } else {
+            echo view('login');
+        }
+    }
+
+
+    public function lock($vID)
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) {
+            $Vendors = new \App\Models\Vendors();
+            $vend =$Vendors->where('id',$vID)->find()[0];
+
+            if($vend['locked']){
+                $Vendors->update($vID, ['locked' => 0,]);
+            }else{
+                $Vendors->update($vID, ['locked' => 1,]);
+             }
+             return redirect()->back();
+        } else {
+            echo view('login');
+        }
+    }
+
 	public function sellpin()
 	{
 		$logged_in = session()->get('admin_logged_in');
@@ -215,7 +321,8 @@ class Home extends BaseController
                 'spin' => $Pins->where('sold','1')->countAllResults(),
                 'upin' => $Pins->where('used','1')->countAllResults(),
                 'vendors' => $Vendors->findAll(),
-                'cursor' => $Pins->where('vendor','new')->first()['id']
+                'cursor' => $Pins->where('vendor','new')->first()['id'],
+                // 'locked' => 0,
             ];
 
             echo view('header', $headerdata);
@@ -250,6 +357,9 @@ class Home extends BaseController
             echo view('login');
         }
     }
+
+
+    // https://opensheet.elk.sh/1YD3D_WsBJxO6r91A9QPWK-C1GZWkUuElziA0Z1vRAZM/pmca
 
 	//--------------------------------------------------------------------
 

@@ -10,7 +10,7 @@ class Vendors extends Model
 
     protected $returnType = 'array';
     protected $useSoftDeletes = true;
-    protected $allowedFields = ['name','acc_no','bank','access_code','pins','log'];
+    protected $allowedFields = ['name','acc_no','bank','access_code','pins','log','sheet','locked'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

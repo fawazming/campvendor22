@@ -66,8 +66,24 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-4">
-
+        <div class="col-md-8">
+            <h6>Permit Vendor to Sync</h6>
+            <div class="container">
+                <p>Clear Google Sheet after Sync & Lock Sync Again</p>
+                <div class="row">
+                    <?php foreach($vendors as $key => $vendor): ?>
+                    <div class="col">
+                        <p>Vendor: <?=$vendor['name']?></p>
+                        <!-- <p>Numbers: 30</p> -->
+                        <p><?php if ($vendor['locked']): ?>
+                        <a class="btn btn-primary" href="<?=base_url('lock/'.$vendor['id'])?>" role="button">Unlock Sync</a>
+                        <?php else: ?>
+                        <a class="btn btn-secondary" href="<?=base_url('lock/'.$vendor['id'])?>" role="button">Syncing</a>
+                        <?php endif; ?></p>
+                    </div>
+                <?php endforeach?>
+                </div>
+            </div>
         </div>
     </div>
 </div>
