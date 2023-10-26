@@ -19,6 +19,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Pin</th>
+                                    <th>Worth</th>
                                     <th>Used</th>
                                     <th>Sold</th>
                                     <th>Action</th>
@@ -29,6 +30,7 @@
                                     <tr>
                                         <td><?= $pin['id'] ?></td>
                                         <td><a href="javascript:;"><?= $pin['pin'] ?></a></td>
+                                        <td><?= $pin['worth'] ?></td>
                                         <td><?= $pin['used'] ?></td>
                                         <td><?= $pin['sold'] ?></td>
                                         <td><a href="<?=base_url('sellpin?pn='.$pin['id'])?>"><span class="badge badge-success badge-pill">Sell</span></a></td>
