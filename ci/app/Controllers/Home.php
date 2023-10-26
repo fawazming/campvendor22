@@ -199,11 +199,12 @@ class Home extends BaseController
 			$incoming = $this->request->getPost();
 			$range = explode('-',$incoming['range']);
 			$user = $incoming['user'];
+			$worth = $incoming['worth'];
 			
 			$Pins = new \App\Models\Pins();
 			$Vendors = new \App\Models\Vendors();
 			for ($i=$range[0]; $i < ($range[1]+1); $i++) { 
-				$Pins->update($i, ['vendor' => $user]);
+				$Pins->update($i, ['vendor' => $user, 'worth'=>$worth]);
 			}
 			$vend = $Vendors->where('name', $user)->find()[0];
 			$vendID = $vend['id'];
