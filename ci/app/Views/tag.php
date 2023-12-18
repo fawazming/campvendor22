@@ -59,6 +59,19 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
+                        <label for="range" class="col-sm-1-12 col-form-label">LB</label>
+                        <div class="col-sm-1-12">
+                            <select name="lb" id="" class="form-control">
+                                <option value="">Select a Local Branch</option>
+                                <option value="all">All</option>
+                                <option value="Ijebu">Ijebu</option>
+                                <option value="Remo">Remo</option>
+                                <option value="Egba">Egba</option>
+                                <option value="Adoodo">Adoodo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
                         <div class="offset-sm-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Print</button>
                         </div>
@@ -66,7 +79,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-8">
+        <!-- <div class="col-md-8">
             <h6>Permit Vendor to Sync</h6>
             <div class="container">
                 <p>Clear Google Sheet after Sync & Lock Sync Again</p>
@@ -74,7 +87,6 @@
                     <?php foreach($vendors as $key => $vendor): ?>
                     <div class="col">
                         <p>Vendor: <?=$vendor['name']?></p>
-                        <!-- <p>Numbers: 30</p> -->
                         <p><?php if ($vendor['locked']): ?>
                         <a class="btn btn-primary" href="<?=base_url('lock/'.$vendor['id'])?>" role="button">Unlock Sync</a>
                         <?php else: ?>
@@ -83,6 +95,35 @@
                     </div>
                 <?php endforeach?>
                 </div>
+            </div>
+        </div> -->
+        <div class="col-md-4">
+            <h6>Print Visitors/Lecturers Tag</h6>
+            <div class="container">
+                <form action="<?=base_url('printvtag')?>" method="post">
+                    <div class="mb-3 row">
+                        <label for="range" class="col-sm-1-12 col-form-label">Range</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="range" id="range" placeholder="">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="range" class="col-sm-1-12 col-form-label">TYPE</label>
+                        <div class="col-sm-1-12">
+                            <select name="typer" id="" class="form-control">
+                                <option value="">Select a Tag Type</option>
+                                <option value="v">Visitors</option>
+                                <option value="l">Lecturer</option>
+                                <option value="o">Official</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Print</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

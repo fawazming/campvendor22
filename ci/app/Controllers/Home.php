@@ -341,19 +341,60 @@ class Home extends BaseController
         if ($logged_in) {
             $incoming = $this->request->getPost();
             $range = explode('-',$incoming['range']);
+            $lb = $incoming['lb'];
 
             $Delegates = new \App\Models\Delegates();
-            $del = '';
-            if(count($range)==1){
-                $del = $Delegates->where('id',$range[0])->find();
-            }else{
-                $del = [];
-                for ($i=$range[0]; $i < ($range[1]+1); $i++) {
-                   array_push($del,$Delegates->where('id', $i)->find());
-                }
-            }
+            	$del = '';
 
+            if($lb == 'all'){
+	            if(count($range)==1){
+	                $del = $Delegates->where(['id'=>$range[0]])->find();
+	            }else{
+	                $del = [];
+	                for ($i=$range[0]; $i < ($range[1]+1); $i++) {
+	                   array_push($del,$Delegates->where('id', $i)->find());
+	                }
+	            }
+            }else{
+	            if(count($range)==1){
+	                $del = $Delegates->where(['id'=>$range[0],'lb'=>$lb])->find();
+	            }else{
+	                $del = [];
+	                for ($i=$range[0]; $i < ($range[1]+1); $i++) {
+	                   array_push($del,$Delegates->where(['id'=> $i,'lb'=>$lb])->find());
+	                }
+	            }
+            }
+            
+            // dd($del);
             echo view('tags', ['del'=>$del]);
+        } else {
+            echo view('login');
+        }
+    }
+
+
+    public function printvtag()
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) {
+            $incoming = $this->request->getPost();
+            $range = explode('-',$incoming['range']);
+
+            $Delegates = new \App\Models\Delegates();
+            	$del = '';
+
+	            if(count($range)==1){
+	                $del = $range[0];
+	            }else{
+	                $del = [];
+	                for ($i=$range[0]; $i < ($range[1]+1); $i++) {
+	                   array_push($del,$i);
+	                }
+	            }
+            
+            // dd($del);
+            echo view('vtags', ['del'=>$del, 'type'=>$incoming['typer']]);
         } else {
             echo view('login');
         }

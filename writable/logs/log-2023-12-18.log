@@ -59,3 +59,97 @@ in APPPATH\Views\tags.php on line 99.
  5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:29:21 --> Undefined array key 0
+in APPPATH\Views\tags.php on line 124.
+ 1 APPPATH\Views\tags.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\tags.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tags.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('tags', [], true)
+ 5 APPPATH\Controllers\Home.php(370): view('tags', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:30:38 --> Undefined array key 0
+in APPPATH\Views\tags.php on line 124.
+ 1 APPPATH\Views\tags.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\tags.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tags.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('tags', [], true)
+ 5 APPPATH\Controllers\Home.php(370): view('tags', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:30:42 --> Undefined array key 0
+in APPPATH\Views\tags.php on line 124.
+ 1 APPPATH\Views\tags.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\tags.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\tags.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('tags', [], true)
+ 5 APPPATH\Controllers\Home.php(370): view('tags', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:31:29 --> syntax error, unexpected token "if"
+in APPPATH\Controllers\Home.php on line 360.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(857): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:32:19 --> Undefined variable $i
+in APPPATH\Controllers\Home.php on line 359.
+ 1 APPPATH\Controllers\Home.php(359): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'APPPATH\\Controllers\\Home.php', 359)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:39:18 --> syntax error, unexpected identifier "x"
+in APPPATH\Views\tags.php on line 80.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('tags', [], true)
+ 3 APPPATH\Controllers\Home.php(370): view('tags', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 04:45:08 --> syntax error, unexpected token "if", expecting ":"
+in APPPATH\Views\header.php on line 87.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('header', [], true)
+ 3 APPPATH\Controllers\Home.php(67): view('header', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:17:11 --> Cannot access offset of type string on string
+in APPPATH\Views\vtags.php on line 127.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('vtags', [], true)
+ 4 APPPATH\Controllers\Home.php(397): view('vtags', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printvtag()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:19:22 --> Cannot access offset of type string on string
+in APPPATH\Views\vtags.php on line 114.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('vtags', [], true)
+ 4 APPPATH\Controllers\Home.php(397): view('vtags', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printvtag()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 06:34:19 --> Undefined array key "typer"
+in APPPATH\Controllers\Home.php on line 397.
+ 1 APPPATH\Controllers\Home.php(397): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "typer"', 'APPPATH\\Controllers\\Home.php', 397)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printvtag()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

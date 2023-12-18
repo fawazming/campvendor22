@@ -72,6 +72,14 @@
                 return $val;
             }
         }
+        $audience = '';
+        if($type == 'l'){
+            $audience = 'LECTURER';
+        }else if($type == 'v'){
+            $audience = 'VISITOR';
+        }else if($type == 'o'){
+            $audience = 'OFFICIAL';
+        }
         $counter = 1;
             echo"<div class='container sheet'>";
 
@@ -89,24 +97,13 @@
             <small>https://camp.phfogun.org.ng</small>
         </div>
         <br>
-        <div class='m-0'>
-            <p class='m-0'>Name:</p>
-            <h4 class='m-0'>".$de[0]['fname']." ".$de[0]['lname']."</h4>
-        </div>
-         <br>
-        <div class='m-0'>
-            <p class='m-0'>Local Branch & House:</p>
-            <h4 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h4>
-        </div>
         <br>
-        <div class='m-0'>
-            <p class='m-0'>Category:</p>
-            <h4 class='m-0'>".category($de[0]['category'])."</h4>
-        </div>
-        <br>
+        <div style='height: 10mm; width: 43mm; background-color: #daa'></div>
+        <div class='center mt-1'>
+            <h1 style='font-family: consolas; font-size: 2.5rem;' class='m-0'>".$audience."<br>".ib($de)."</h1>
 
-        <div class='center logo mt-1'>
-            <h1 style='font-family: consolas;' class='m-0'>PHF".ab($de[0]['lb']).ab($de[0]['gender']).ib($de[0]['id'])."</h1>
+        <div style='height: 5mm; width: 43mm; background-color: #480'></div>
+        <br>
             <small style='font-size: 0.6rem;'>...returning to Allah with PURE HEART</small>
         </div>
     </div>
@@ -122,24 +119,13 @@
             <small>https://camp.phfogun.org.ng</small>
         </div>
         <br>
-        <div class='m-0'>
-            <p class='m-0'>Name:</p>
-            <h4 class='m-0'>".$de[0]['fname']." ".$de[0]['lname']."</h4>
-        </div>
-         <br>
-        <div class='m-0'>
-            <p class='m-0'>Local Branch & House:</p>
-            <h4 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h4>
-        </div>
         <br>
-        <div class='m-0'>
-            <p class='m-0'>Category:</p>
-            <h4 class='m-0'>".category($de[0]['category'])."</h4>
-        </div>
-        <br>
+        <div style='height: 10mm; width: 43mm; background-color: #daa'></div>
+        <div class='center mt-1'>
+            <h1 style='font-family: consolas; font-size: 2.5rem;' class='m-0'>".$audience."<br>".ib($de)."</h1>
 
-        <div class='center logo mt-1'>
-            <h1 style='font-family: consolas;' class='m-0'>PHF".ab($de[0]['lb']).ab($de[0]['gender']).ib($de[0]['id'])."</h1>
+        <div style='height: 5mm; width: 43mm; background-color: #480'></div>
+        <br>
             <small style='font-size: 0.6rem;'>...returning to Allah with PURE HEART</small>
         </div>
     </div>

@@ -84,6 +84,9 @@
                     </li>
                     <li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('special') ?>">Special</a>
                     </li>
+					<?php elseif($clear == 22): ?>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('tag') ?>">Tag Generator</a>
+                    </li>
 					<?php else: ?>
 					<!-- <li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/manual') ?>">Manual Upload</a> -->
 					<!-- </li> -->
