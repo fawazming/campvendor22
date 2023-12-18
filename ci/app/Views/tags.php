@@ -48,6 +48,21 @@
         function ab($val){
             return strtoupper(substr($val,0,1));
         }
+        function category($acr){
+            if($acr == 'jsec'){
+                return "Junior Secondary";
+            }else if($acr == 'ssec'){
+                return "Senior Secondary";
+            }else if($acr == 'primary'){
+                return "Primary School";
+            }else if($acr == 'hi' || $acr == 'Undergraduate'){
+                return "Undergraduate";
+            }else if($acr == 'sch_leaver' || $acr == 'Post/Secondary_Sch_Student'){
+                return "Post Secondary School";
+            }else if ($acr == 'Working_Class' || $acr == 'Workers'){
+                return "Working Class";
+            }
+        }
         function ib($val){
             if ($val > 0 && $val < 10) {
                 return '00'.$val;
@@ -67,7 +82,7 @@
     <div class='card'>
         <div class='center logo'>
             <img src='assets/logo.png' alt='' width='50mm'>
-            <h2 class='m-0'>PMC '22</h2>
+            <h2 class='m-0'>PMC '23</h2>
             <small>https://camp.phfogun.org.ng</small>
         </div>
         <br>
@@ -77,13 +92,13 @@
         </div>
          <br>
         <div class='m-0'>
-            <p class='m-0'>Local Branch:</p>
-            <h4 class='m-0'>".$de[0]['lb']."</h4>
+            <p class='m-0'>Local Branch & House:</p>
+            <h4 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h4>
         </div>
         <br>
         <div class='m-0'>
             <p class='m-0'>Category:</p>
-            <h4 class='m-0'>".$de[0]['category']."</h4>
+            <h4 class='m-0'>".category($de[0]['category'])."</h4>
         </div>
         <br>
 
@@ -100,7 +115,7 @@
     <div class='card'>
         <div class='center logo'>
             <img src='assets/logo.png' alt='' width='50mm'>
-            <h2 class='m-0'>PMC '22</h2>
+            <h2 class='m-0'>PMC '23</h2>
             <small>https://camp.phfogun.org.ng</small>
         </div>
         <br>
@@ -110,13 +125,13 @@
         </div>
          <br>
         <div class='m-0'>
-            <p class='m-0'>Local Branch:</p>
-            <h4 class='m-0'>".$de[0]['lb']."</h4>
+            <p class='m-0'>Local Branch & House:</p>
+            <h4 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h4>
         </div>
         <br>
         <div class='m-0'>
             <p class='m-0'>Category:</p>
-            <h4 class='m-0'>".$de[0]['category']."</h4>
+            <h4 class='m-0'>".category($de[0]['category'])."</h4>
         </div>
         <br>
 

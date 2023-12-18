@@ -1,0 +1,61 @@
+ERROR - 2023-12-18 03:44:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'phfogun_pmc22'@'localhost' (using password: YES) in C:\xampp\htdocs\campvendor22\ci\system\Database\MySQLi\Connection.php:170
+Stack trace:
+#0 C:\xampp\htdocs\campvendor22\ci\system\Database\MySQLi\Connection.php(170): mysqli->real_connect('localhost', 'phfogun_pmc22', Object(SensitiveParameterValue), 'phfogun_pmc22', 3306, '', 0)
+#1 C:\xampp\htdocs\campvendor22\ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\campvendor22\ci\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\campvendor22\ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\campvendor22\ci\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\campvendor22\ci\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\campvendor22\ci\app\Controllers\Home.php(24): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\campvendor22\ci\system\CodeIgniter.php(907): App\Controllers\Home->auth()
+#8 C:\xampp\htdocs\campvendor22\ci\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\campvendor22\ci\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\campvendor22\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\campvendor22\ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\campvendor22\ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\campvendor22\ci\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\campvendor22\ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\campvendor22\ci\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\campvendor22\ci\system\BaseModel.php(523): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\xampp\htdocs\campvendor22\ci\app\Controllers\Home.php(24): CodeIgniter\BaseModel->find()
+#6 C:\xampp\htdocs\campvendor22\ci\system\CodeIgniter.php(907): App\Controllers\Home->auth()
+#7 C:\xampp\htdocs\campvendor22\ci\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\campvendor22\ci\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\campvendor22\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-18 03:44:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vendors`
+WHERE `access_code` = :access_code:
+AND `vendors`.`deleted_at` IS NULL', [...], false)
+ 3 SYSTEMPATH\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Controllers\Home.php(24): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->auth()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 03:56:18 --> syntax error, unexpected double-quoted string "</h4>", expecting "," or ";"
+in APPPATH\Views\tags.php on line 99.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('tags', [], true)
+ 3 APPPATH\Controllers\Home.php(356): view('tags', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-18 03:56:58 --> syntax error, unexpected double-quoted string "</h4>", expecting "," or ";"
+in APPPATH\Views\tags.php on line 99.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('tags', [], true)
+ 3 APPPATH\Controllers\Home.php(356): view('tags', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printtag()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
