@@ -258,10 +258,10 @@ class Home extends BaseController
 			$allPins = $Pins->findAll();
 			foreach ($allPined as $key => $alp) {
 				// $Pins->where('pin',$alp['ref'])->update(['used' => 'yes']);
-				var_dump($alp);
+				// var_dump($alp);
 				$pinID = $Pins->where('pin',$alp['ref'])->find()[0]['id'];
-				var_dump($pinID);
-				$Pins->update($pinID,['used' => 'yes']);
+				// var_dump($pinID);
+				$Pins->update($pinID,['used' => '1']);
 			}
 			return redirect()->back();
 		} else {
