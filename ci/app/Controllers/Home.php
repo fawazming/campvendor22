@@ -373,6 +373,32 @@ class Home extends BaseController
         }
     }
 
+    public function printotag()
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) {
+            $incoming = $this->request->getPost();
+            $range = explode('-',$incoming['range']);
+
+            $Delegates = new \App\Models\Delegates();
+            	$del = '';
+
+	            if(count($range)==1){
+	                $del = $Delegates->where(['id'=>$range[0],'category'=>'Camp_Official'])->find();
+	            }else{
+	                $del = [];
+	                for ($i=$range[0]; $i < ($range[1]+1); $i++) {
+	                   array_push($del,$Delegates->where(['id'=> $i,'category'=>'Camp_Official'])->find());
+	                }
+	            }
+            
+            // dd($del);
+            echo view('otags', ['del'=>$del]);
+        } else {
+            echo view('login');
+        }
+    }
+
 
     public function printvtag()
     {

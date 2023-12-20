@@ -68,7 +68,26 @@
                                 <option value="Remo">Remo</option>
                                 <option value="Egba">Egba</option>
                                 <option value="Adoodo">Adoodo</option>
+                                <option value="others">Others</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Print</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h6>Print Official tags</h6>
+            <div class="container">
+                <form action="<?=base_url('printotag')?>" method="post">
+                    <div class="mb-3 row">
+                        <label for="range" class="col-sm-1-12 col-form-label">Range</label>
+                        <div class="col-sm-1-12">
+                            <input type="text" class="form-control" name="range" id="range" placeholder="">
                         </div>
                     </div>
                     <div class="mb-3 row">
