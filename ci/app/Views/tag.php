@@ -91,6 +91,19 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
+                        <label for="range" class="col-sm-1-12 col-form-label">LB</label>
+                        <div class="col-sm-1-12">
+                            <select name="lb" id="" class="form-control">
+                                <option value="">Select a Local Branch</option>
+                                <option value="Ijebu">Ijebu</option>
+                                <option value="Remo">Remo</option>
+                                <option value="Egba">Egba</option>
+                                <option value="Adoodo">Adoodo</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
                         <div class="offset-sm-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Print</button>
                         </div>

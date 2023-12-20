@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMC Official Tags</title>
     <link rel="stylesheet" href="<?=base_url('assets/css/paper.css')?>">
-     <!-- Set page size here: A5, A4, A4 landscape, letter, legal or A3 -->
+     <!-- Set page size here: A5, C5, C5 landscape, letter, legal or A3 -->
     <!-- Set also "landscape" if you need -->
-    <style>@page { size: A4 }</style>
+    <style>@page { size: C5 }</style>
     <style>
         body{
             font-family: 'Tahoma';
@@ -27,6 +27,9 @@
             border: 2px #000 solid;
             padding: 1mm 3mm;
             margin: 0;
+            margin-top: 15mm;
+            margin-left: 5mm;
+            margin-right: 5mm;
         }
         .center{
             text-align: center;
@@ -40,9 +43,12 @@
         .mt-1{
             margin-top: 3px;
         }
+        .mt-2{
+            margin-top: 6px;
+        }
     </style>
 </head>
-<body class="A4">
+<body class="C5">
 
     <?php
         function ab($val){
@@ -81,16 +87,15 @@
             if($de == []){
                 $x= 9;
             }else{
-            if ($counter == 12) {
+            if ($counter == 2) {
                 $counter = 0;
                 echo"
     <div class='card'>
         <div class='center logo'>
             <img src='assets/logo.png' alt='' width='50mm'>
             <h2 class='m-0'>PMC '23</h2>
-            <small>https://camp.phfogun.org.ng</small>
+            <h2 class='mt-2' style='font-size:2rem;'>OFFICIAL</h2>
         </div>
-        <br>
         <div class='m-0'>
             <p class='m-0'>Name:</p>
             <h4 class='m-0'>".$de[0]['fname']." ".$de[0]['lname']."</h4>
@@ -102,8 +107,8 @@
         </div>
         <br>
         <div class='m-0'>
-            <p class='m-0'>Category:</p>
-            <h4 class='m-0'>".category($de[0]['category'])."</h4>
+            <p class='m-0'>Department:</p>
+            <h4 class='m-0'>".explode('||',$de[0]['school'])[1]."</h4>
         </div>
         <br>
 
@@ -117,13 +122,12 @@
                 <div class='container sheet'>";
             }else{
                 echo "
-    <div class='card'>
+<div class='card'>
         <div class='center logo'>
             <img src='assets/logo.png' alt='' width='50mm'>
             <h2 class='m-0'>PMC '23</h2>
-            <small>https://camp.phfogun.org.ng</small>
+            <h2 class='mt-2' style='font-size:2rem;'>OFFICIAL</h2>
         </div>
-        <br>
         <div class='m-0'>
             <p class='m-0'>Name:</p>
             <h4 class='m-0'>".$de[0]['fname']." ".$de[0]['lname']."</h4>
@@ -135,8 +139,8 @@
         </div>
         <br>
         <div class='m-0'>
-            <p class='m-0'>Category:</p>
-            <h4 class='m-0'>".category($de[0]['category'])."</h4>
+            <p class='m-0'>Department:</p>
+            <h4 class='m-0'>".explode('||',$de[0]['school'])[1]."</h4>
         </div>
         <br>
 

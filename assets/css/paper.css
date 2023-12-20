@@ -9,6 +9,7 @@ body { margin: 0 }
 }
 
 /** Paper sizes **/
+body.C5           .sheet { width: 127mm; height: 128mm }
 body.A3           .sheet { width: 297mm; height: 419mm }
 body.A3.landscape .sheet { width: 420mm; height: 296mm }
 body.A4           .sheet { width: 210mm; height: 296mm }
@@ -34,6 +35,7 @@ body.A5.landscape .sheet { width: 210mm; height: 147mm }
 
 /** Fix for Chrome issue #273306 **/
 @media print {
+           body.C5           { width: 127mm }
            body.A3.landscape { width: 420mm }
   body.A3, body.A4.landscape { width: 297mm }
   body.A4, body.A5.landscape { width: 210mm }

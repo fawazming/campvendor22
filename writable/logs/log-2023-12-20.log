@@ -1,0 +1,11 @@
+CRITICAL - 2023-12-20 14:29:01 --> Array to string conversion
+in APPPATH\Views\otags.php on line 111.
+ 1 APPPATH\Views\otags.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\otags.php', 111)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\otags.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('otags', [], true)
+ 5 APPPATH\Controllers\Home.php(396): view('otags', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->printotag()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

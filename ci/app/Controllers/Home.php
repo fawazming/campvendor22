@@ -379,6 +379,7 @@ class Home extends BaseController
         if ($logged_in) {
             $incoming = $this->request->getPost();
             $range = explode('-',$incoming['range']);
+            $lb = $incoming['lb'];
 
             $Delegates = new \App\Models\Delegates();
             	$del = '';
@@ -388,7 +389,7 @@ class Home extends BaseController
 	            }else{
 	                $del = [];
 	                for ($i=$range[0]; $i < ($range[1]+1); $i++) {
-	                   array_push($del,$Delegates->where(['id'=> $i,'category'=>'Camp_Official'])->find());
+	                   array_push($del,$Delegates->where(['id'=> $i,'category'=>'Camp_Official', 'lb'=>$lb])->find());
 	                }
 	            }
             
