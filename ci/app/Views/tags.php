@@ -58,7 +58,7 @@
             }else if($acr == 'hi' || $acr == 'Undergraduate'){
                 return "Undergraduate";
             }else if($acr == 'sch_leaver' || $acr == 'Post/Secondary_Sch_Student'){
-                return "Post Secondary School";
+                return "Post Sec. Sch";
             }else if ($acr == 'Working_Class' || $acr == 'Workers'){
                 return "Working Class";
             }
@@ -96,7 +96,7 @@
          <br>
         <div class='m-0'>
             <p class='m-0'>Local Branch & House:</p>
-            <h4 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h4>
+            <h5 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h5>
         </div>
         <br>
         <div class='m-0'>
@@ -129,7 +129,7 @@
          <br>
         <div class='m-0'>
             <p class='m-0'>Local Branch & House:</p>
-            <h4 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h4>
+            <h5 class='m-0'>".$de[0]['lb']." || ".$de[0]['house']."</h5>
         </div>
         <br>
         <div class='m-0'>
