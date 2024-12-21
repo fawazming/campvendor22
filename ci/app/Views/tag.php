@@ -31,6 +31,10 @@
                             <h6 class="mb-0 mt-3 font-15 text-muted font-weight-normal">AdoOdo pin</h6>
                         </div>
                         <div class="col text-center">
+                            <div class="easypie" data-percent="<?=($rpin/10) ?>" data-bar-color="#00bcd4" data-size="110" data-line-width="8"><span class="easypie-data text-info" style="font-size:32px;"><?=($yepin) ?></span></div>
+                            <h6 class="mb-0 mt-3 font-15 text-muted font-weight-normal">Yewa pin</h6>
+                        </div>
+                        <div class="col text-center">
                             <div class="easypie" data-percent="<?=($rpin/10) ?>" data-bar-color="#00bcd4" data-size="110" data-line-width="8"><span class="easypie-data text-info" style="font-size:32px;"><?=($opin) ?></span></div>
                             <h6 class="mb-0 mt-3 font-15 text-muted font-weight-normal">Online pin</h6>
                         </div>
@@ -68,6 +72,7 @@
                                 <option value="Remo">Remo</option>
                                 <option value="Egba">Egba</option>
                                 <option value="Adoodo">Adoodo</option>
+                                <option value="Yewa">Yewa</option>
                                 <option value="others">Others</option>
                             </select>
                         </div>
@@ -99,6 +104,7 @@
                                 <option value="Remo">Remo</option>
                                 <option value="Egba">Egba</option>
                                 <option value="Adoodo">Adoodo</option>
+                                <option value="Yewa">Yewa</option>
                                 <option value="others">Others</option>
                             </select>
                         </div>

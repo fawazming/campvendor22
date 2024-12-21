@@ -318,6 +318,7 @@ class Home extends BaseController
                 'ipin' => $Pins->where('vendor','Ijebu')->countAllResults(),
                 'epin' => $Pins->where('vendor','Egba')->countAllResults(),
                 'aapin' => $Pins->where('vendor','AdoOdo')->countAllResults(),
+                'yepin' => $Pins->where('vendor','Yewa')->countAllResults(),
                 'opin' => $Pins->where('vendor','online')->countAllResults(),
                 'spin' => $Pins->where('sold','1')->countAllResults(),
                 'upin' => $Pins->where('used','1')->countAllResults(),
