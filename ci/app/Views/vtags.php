@@ -93,7 +93,7 @@
     <div class='card'>
         <div class='center logo'>
             <img src='assets/logo.png' alt='' width='50mm'>
-            <h2 class='m-0'>PMC '23</h2>
+            <h2 class='m-0'>PMC</h2>
             <small>https://camp.phfogun.org.ng</small>
         </div>
         <br>
@@ -115,7 +115,7 @@
     <div class='card'>
         <div class='center logo'>
             <img src='assets/logo.png' alt='' width='50mm'>
-            <h2 class='m-0'>PMC '23</h2>
+            <h2 class='m-0'>PMC</h2>
             <small>https://camp.phfogun.org.ng</small>
         </div>
         <br>
