@@ -428,6 +428,26 @@ class Home extends BaseController
         }
     }
 
+    public function printpins()
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) {
+            $incoming = $this->request->getPost();
+			$type = $incoming['typer'];
+			$vendor = session()->get('admin');
+
+            $Delegates = new \App\Models\Delegates();
+			$Pins = new \App\Models\Pins();
+
+			$allP = $Pins->where('vendor', $vendor)->findAll();
+
+			dd($allP);
+            echo view('ppins', ['ppp'=>$allP]);
+        } else {
+            echo view('login');
+        }
+    }
+
 
     // https://opensheet.elk.sh/1YD3D_WsBJxO6r91A9QPWK-C1GZWkUuElziA0Z1vRAZM/pmca
 

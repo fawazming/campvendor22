@@ -44,6 +44,7 @@ $routes->post('/auth', 'Home::auth');
 $routes->post('/sharepin', 'Home::sharepin');
 $routes->post('/printtag', 'Home::printtag');
 $routes->post('/printotag', 'Home::printotag');
+$routes->post('/printpins', 'Home::printpins');
 $routes->post('/printvtag', 'Home::printvtag');
 $routes->post('/logupdate', 'Home::logupdate');
 $routes->get('/admin/logout', 'Home::logout');

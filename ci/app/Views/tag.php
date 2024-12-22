@@ -164,6 +164,29 @@
                 </form>
             </div>
         </div>
+        <div class="col-md-4">
+            <h6>Print From my Pins</h6>
+            <div class="container">
+                <form action="<?=base_url('printpins')?>" method="post">
+                    <div class="mb-3 row">
+                        <label for="range" class="col-sm-1-12 col-form-label">Used/Not</label>
+                        <div class="col-sm-1-12">
+                            <select name="typer" id="" class="form-control">
+                                <option value="">Select a Pin Type</option>
+                                <option value="used">Used</option>
+                                <option value="nused">Not yet Used</option>
+                                <option value="all">All</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Print Pins</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 </div>
